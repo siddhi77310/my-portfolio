@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gourmet Bites | Recipe Gallery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #e67e22;
+            --secondary: #27ae60;
+            --dark: #2c3e50;
+            --light: #fdfcf0;
+            --shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+
+        header p {
+            color: #7f8c8d;
+            font-weight: 300;
+        }
+
+        /* Recipe Grid */
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Individual Card */
+        .recipe-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+
+        .recipe-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .recipe-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .recipe-content {
+            padding: 20px;
+        }
+
+        .recipe-tag {
+            background: var(--secondary);
+            color: white;
+            font-size: 0.7rem;
+            padding: 4px 10px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .recipe-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .recipe-info {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: #95a5a6;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+
+        .btn-view {
+            display: block;
+            width: 100%;
+            text-align: center;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .btn-view:hover {
+            background: #d35400;
+        }
+
+        /* Heart Icon */
+        .save-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(255, 255, 255, 0.8);
+            border: none;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s;
+        }
+
+        .save-btn:hover {
+            background: white;
+            color: #e74c3c;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Gourmet Bites</h1>
+        <p>Simple recipes for the modern home cook</p>
+    </header>
+
+    <div class="gallery-container">
+        <div class="recipe-card">
+            <button class="save-btn">♥</button>
+            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=500&q=80" alt="Salad" class="recipe-image">
+            <div class="recipe-content">
+<p> Summer Quinoa Salad
+A light, protein-packed salad that's perfect for warm weather.
+Rinse & Boil: Rinse 1/2 cup of quinoa under cold water. In a small pot, bring 1 cup of water (or vegetable broth) to a boil. Add the quinoa, cover, and simmer on low for 15 minutes until water is absorbed.
+Fluff & Cool: Remove from heat and let it sit covered for 5 minutes. Fluff with a fork and spread it out on a plate to cool to room temperature.
+Chop the Veg: While the quinoa cools, dice 1/2 a cucumber, 1/4 of a red onion, and halve a handful of cherry tomatoes.
+The Dressing: Whisk together 2 tbsp olive oil, juice of half a lemon, 1 tsp honey, and a pinch of dried oregano.
+Assemble: In a large bowl, combine the cooled quinoa, chopped vegetables, and a handful of crumbled feta.
+Toss: Pour the dressing over the mix and toss gently. Top with fresh parsley or mint for a bright finish.</p>
+                <span class="recipe-tag">Healthy</span>
+                <h3 class="recipe-title">Summer Quinoa Salad</h3>
+                <div class="recipe-info">
+                    <span>⏱ 15 Mins</span>
+                    <span>🔥 Easy</span>
+                </div>
+            </div>
+            <a href="#" class="btn-view">View Recipe</a>
+        </div>
+
+        <div class="recipe-card">
+            <button class="save-btn">♥</button>
+            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=500&q=80" alt="Bowl" class="recipe-image">
+            <div class="recipe-content">
+<p> Berry Smoothie Bowl
+The key to a perfect "thick" bowl is using frozen fruit and very little liquid so your toppings don't sink!
+Freeze Your Fruit: Use 1 frozen banana (sliced before freezing) and 1 heaped cup of mixed frozen berries (strawberries, blueberries, and raspberries).
+The Base Liquid: Pour only 1/4 cup of milk (oat, coconut, or dairy) into your blender first. Adding the liquid first helps the blades move.
+Blend & Pulse: Add the frozen fruit and 1 tablespoon of Greek yogurt (optional, for creaminess). Start your blender on the lowest speed or use the "pulse" setting.
+Pro Tip: Use a tamper or a long spoon (with the blender off) to push the fruit down until it reaches a thick, soft-serve ice cream consistency.
+The Pour: Scoop the thick mixture into a wide, shallow bowl. Smooth the top with the back of a spoon.
+Aesthetic Toppings: Arrange these in neat rows or a crescent moon shape for a professional look:
+Fresh Fruit: Sliced strawberries and a few fresh blackberries.
+Crunch: 2 tablespoons of granola or toasted coconut flakes.
+Superfoods: A sprinkle of chia seeds or hemp hearts.
+The Drizzle: A small swirl of honey or almond butter.</p>
+                <span class="recipe-tag" style="background: #9b59b6;">Breakfast</span>
+                <h3 class="recipe-title">Berry Smoothie Bowl</h3>
+                <div class="recipe-info">
+                    <span>⏱ 10 Mins</span>
+                    <span>🔥 Beginner</span>
+                </div>
+            </div>
+            <a href="#" class="btn-view">View Recipe</a>
+        </div>
+
+        <div class="recipe-card">
+            <button class="save-btn">♥</button>
+            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=500&q=80" alt="Pizza" class="recipe-image">
+            <div class="recipe-content">
+<p> Rustic Pepperoni Pizza
+A "rustic" pizza focuses on high heat and a hand-stretched, irregular shape.
+Blast the Heat: Preheat your oven to its maximum temperature (260°C / 500°F). If you have a baking stone or steel, put it in now.
+Stretch by Hand: On a floured surface, press a ball of pizza dough into a flat disc. Use your knuckles to gently stretch it into a rough oval. Don't use a rolling pin—keeping the air bubbles in the dough makes the crust rustic and chewy.
+Simple Sauce: Spread a thin layer of crushed San Marzano tomatoes over the dough. Season with a pinch of sea salt and garlic flakes.
+Cheesy Layers: Distribute chunks of fresh mozzarella (torn by hand) and a generous layer of pepperoni slices.
+The Bake: Slide the pizza onto the hot stone or a pre-heated tray. Bake for 8-10 minutes until the edges are charred and the pepperoni is crispy.
+Final Touch: Brush the crust lightly with garlic butter as soon as it comes out of the oven.</p>
+
+           <span class="recipe-tag" style="background: #e74c3c;">Italian</span>
+                <h3 class="recipe-title">Rustic Pepperoni Pizza</h3>
+                <div class="recipe-info">
+                    <span>⏱ 45 Mins</span>
+                    <span>🔥 Medium</span>
+                </div>
+            </div>
+            <a href="#" class="btn-view">View Recipe</a>
+        </div>
+    </div>
+
+</body>
+</html>
